@@ -1,0 +1,34 @@
+package Practice06;
+
+import java.util.Scanner;
+
+public class Q01_WhileLoop {
+
+    /*
+     girilen sayının basamaklarındaki rakamların toplamını bulunuz.
+     */
+
+    public static void main(String[] args) {
+
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Lutfen bir adet sayi giriniz : ");
+        int sayi = scan.nextInt();
+
+
+        basamakToplama(sayi);
+        System.out.print("Basamak Toplama : "+basamakToplama(sayi));
+
+
+    }
+
+    public static int basamakToplama(int sayi) {
+        int toplam = 0;
+
+        while (sayi != 0) {
+            toplam += sayi % 10;
+            sayi/= 10;
+        }
+
+        return toplam;
+    }
+}
